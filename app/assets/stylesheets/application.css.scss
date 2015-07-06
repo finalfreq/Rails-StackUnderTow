@@ -29,3 +29,24 @@ body {
   background-color: red;
   transition: all 1s;
 }
+
+
+#time {
+  float:right;
+}
+
+.well {
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+#question {
+  border-bottom: solid 1px;
+  margin-bottom: 2%;
+}
+
+#answer-question{
+  padding-top: 25px;
+  margin-top: 25px;
+  border-top: solid 1px;
+}

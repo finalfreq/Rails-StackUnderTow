@@ -1,0 +1,19 @@
+<%= content_for :title, "Questions | UnderTow" %>
+<h1 class="page-header text-center">Current UnderTows</h1>
+
+
+<% @questions.each do |question| %>
+  <div class="well">
+    <div class="row">
+      <%= link_to question_path(question) do %>
+        <h2> <%= question.name %> </h2>
+      <% end %>
+    </div>
+    <div class='row'>
+      <span>
+        <%= question.summarize %>
+      </span>
+      <span id='time'>Asked by <%= link_to question.user.name, user_path(question.user) %> <%= time_ago_in_words(question.created_at) %> ago</span>
+    </div>
+  </div>
+<% end %>

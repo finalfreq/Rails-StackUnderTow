@@ -1,2 +1,17 @@
-<%= @question.name %><br>
-<%= @question.body %>
+<h1 class="page-header"><%= @question.name %></h1>
+<div id= "question">
+<p>
+  <%= @question.body %>
+</p>
+<h3> <%= @question.answers.length %> Answer(s)</h3>
+</div>
+<% @question.answers.each do |answer| %>
+<p>
+  <%= answer.body %> by  <%= link_to answer.user.name, user_path(answer.user.name) %>
+</p>
+<% end %>
+ 
+
+<div id="answer-question">
+  <%= render 'answers/form' %>
+</div>

@@ -1,10 +1,11 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Guest/Desktop/stack_clone/spec/models/question_spec.rb": [
+      "/Users/Guest/Desktop/stack_clone/spec/models/answer_spec.rb": [
         1,
         null,
         1,
+        2,
         2,
         2,
         null
@@ -252,6 +253,7 @@
         null,
         1,
         null,
+        null,
         1,
         1,
         1,
@@ -261,10 +263,48 @@
         1,
         null
       ],
+      "/Users/Guest/Desktop/stack_clone/app/models/answer.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/Guest/Desktop/stack_clone/spec/models/question_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/Guest/Desktop/stack_clone/app/models/question.rb": [
         1,
+        null,
         1,
         1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        0,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/Guest/Desktop/stack_clone/spec/models/user_spec.rb": [
@@ -274,6 +314,7 @@
         2,
         2,
         2,
+        2,
         1,
         1,
         1,
@@ -282,12 +323,17 @@
         1,
         1,
         1,
+        null,
+        null,
         null,
         null
       ],
       "/Users/Guest/Desktop/stack_clone/app/models/user.rb": [
         1,
         null,
+        1,
+        null,
+        1,
         1,
         null,
         1,
@@ -314,6 +360,6 @@
         null
       ]
     },
-    "timestamp": 1436214798
+    "timestamp": 1436222008
   }
 }

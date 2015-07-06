@@ -1,0 +1,5 @@
+<%= render "layouts/errors", object: @answer %>
+<%= bootstrap_form_for([@question, @answer]) do |f| %>
+  <%= f.text_area :body, placeholder: 'Add Answer', hide_label: true  %>
+  <%= f.submit 'Answer', data:{disable_with: 'Answering....'}, class: 'btn btn-primary btn-block' %>
+<% end %>
