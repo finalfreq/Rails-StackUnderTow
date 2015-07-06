@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>StackClone</title>
+  <title><%= yield(:title) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -13,7 +13,7 @@
 
   </div>
   <ul class='nav navbar-nav'>
-    <li><%= link_to "New User", new_user_path, class: "navbar-custom" %> </li>
+    <li><%= link_to "Ask Question", new_question_path, class: "navbar-custom" %> </li>
   </ul>
   <ul style="padding-right: 30px;" class="nav navbar-nav navbar-right">
     <% if session[:user_id] == nil %>

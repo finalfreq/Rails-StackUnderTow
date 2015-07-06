@@ -1,0 +1,8 @@
+<%= render "layouts/errors", object: @question %>
+
+
+<%= bootstrap_form_for(@question) do |f| %>
+  <%= f.text_field :name, placeholder: "Question Title" %>
+  <%= f.text_area :body, placeholder: "Question Information", rows: "6" %>
+  <%= f.submit data: {disable_with: 'Registering...'}, class: 'btn btn-success btn-block' %>
+<% end %>
