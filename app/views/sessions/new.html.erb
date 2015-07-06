@@ -1,0 +1,8 @@
+<h1>Log In</h1>
+
+<%=bootstrap_form_tag url: '/login' do |f|%>
+<%= f.text_field :name, placeholder: "Username" %>
+<%= f.password_field :password, placeholder: "Password" %>
+<%= f.submit "Log in", data: {disable_with: 'Logging in...'}, class: 'btn btn-success btn-block' %>
+
+<%end%>

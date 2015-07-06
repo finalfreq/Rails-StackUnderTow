@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+@import 'bootstrap';
+@import 'bootstrap-sprockets';
+
+body {
+  margin-top: 50px;
+}
+
+.navbar-custom:hover {
+  color:red;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-brand:hover {
+  background-color: red;
+  transition: all 1s;
+}

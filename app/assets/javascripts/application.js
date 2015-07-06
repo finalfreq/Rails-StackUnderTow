@@ -12,5 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
 //= require turbolinks
 //= require_tree .
+
+$(".alert").alert();
+window.setTimeout(function() { $(".alert").alert().slideUp("slow"); }, 2500);

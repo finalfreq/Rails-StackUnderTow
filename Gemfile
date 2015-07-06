@@ -11,6 +11,7 @@ gem 'sass-rails', '>= 3.2'
 gem 'bootstrap_form'
 gem 'pry'
 gem 'bcrypt'
+
 group :development do
   gem 'byebug'
   gem 'web-console'
