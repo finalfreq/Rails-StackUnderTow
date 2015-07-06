@@ -6,14 +6,14 @@ class AnswersController < ApplicationController
 
   def create
     @answer = Answer.new(answer_params)
+    @question = Question.find(params[:question_id])
     if @answer.save
-      @question = Question.find(params[:question_id])
       @question.answers.push(@answer)
       current_user.answers.push(@answer)
       redirect_to question_path(@question)
       flash[:notice] = "Your answer has been submitted!"
     else
-      flash[:alert] = "There was a problem with your answer"
+      flash[:alert] = "There was a problem with your answer - form empty"
       redirect_to question_path(@question)
     end
 
