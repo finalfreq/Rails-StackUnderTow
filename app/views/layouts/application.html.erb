@@ -20,6 +20,9 @@
     <% if session[:user_id] == nil %>
     <li><%= link_to "Login", login_path, class: "navbar-custom" %> </li>
     <% else %>
+    <% if current_user.admin %>
+    <li><a>Admin</a></li>
+    <% end %>
     <li><a>Welcome <%= current_user.name %> </a></li>
     <li><%= link_to "Logout", logout_path, class: "navbar-custom" %> </li>
     <% end %>
