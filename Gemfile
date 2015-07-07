@@ -13,11 +13,11 @@ gem 'pry'
 gem 'bcrypt'
 
 group :development do
-  gem 'letter_opener'
   gem 'byebug'
   gem 'web-console'
   gem 'spring'
   gem 'quiet_assets'
+  gem 'letter_opener'
 end
 
 group :test, :development do

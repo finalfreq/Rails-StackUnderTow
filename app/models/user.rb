@@ -11,6 +11,7 @@ validates :name, presence: true, uniqueness: true
 validates :email, presence: true, uniqueness: true
 
 before_save :encrypt_password
+after_save :signup_email
 
   def encrypt_password
     self.password_salt = BCrypt::Engine.generate_salt
@@ -24,6 +25,10 @@ before_save :encrypt_password
     else
       nil
     end
+  end
+
+  def signup_email
+    UserMailer.signup_confirmation(self).deliver if email != nil
   end
 
 end

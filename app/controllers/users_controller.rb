@@ -8,7 +8,6 @@ class UsersController < ApplicationController
     if @user.save
       flash[:notice] = "Successfully registered #{@user.name} to Stack UnderTow"
       session[:user_id] = @user.id
-      UserMailer.signup_confirmation(@user).deliver
       redirect_to users_path
     else
       flash[:alert] = "You suck"

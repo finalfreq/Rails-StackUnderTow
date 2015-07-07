@@ -4,9 +4,8 @@
 <%= bootstrap_form_for(@user) do |f| %>
   <%= f.text_field :name, placeholder: "Username" %>
   <%= f.email_field :email, placeholder: "Email" %>
-  <%= f.check_box :admin, placeholder: "Email", value: true %>
+  <%= f.check_box :admin, value: true %>
   <%= f.password_field :password, placeholder: "Password" %>
   <%= f.password_field :password_confirmation, placeholder: 'Confirm Password' %>
   <%= f.submit data: {disable_with: 'Registering...'}, class: 'btn btn-success btn-block' %>
-
 <% end %>
