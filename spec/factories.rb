@@ -3,6 +3,7 @@ FactoryGirl.define do
     name('betty')
     email('betty@gmail.com')
     password('badpass123')
+    password_confirmation('badpass123')
   end
 
   factory(:question) do

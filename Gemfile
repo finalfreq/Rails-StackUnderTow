@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-
 gem 'rails'
 gem 'pg'
 gem 'uglifier'
@@ -8,6 +7,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sass-rails', '>= 3.2'
+gem 'cancancan'
 gem 'bootstrap_form'
 gem 'pry'
 gem 'bcrypt'

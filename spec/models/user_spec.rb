@@ -4,6 +4,7 @@ describe User do
   it {should validate_presence_of :name}
   it {should validate_presence_of :email}
   it {should validate_uniqueness_of :name}
+  it {should validate_uniqueness_of :email}
   it {should have_many :questions}
   it 'encrypts the password' do
     user = FactoryGirl.create(:user)
@@ -15,5 +16,5 @@ describe User do
     User.authenticate(user.name, user.password).should eq user
   end
 
-  
+
 end
