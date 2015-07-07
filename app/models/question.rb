@@ -7,7 +7,7 @@ class Question < ActiveRecord::Base
   validates :body, presence: true
 
 
-  def summerize_whole
+  def summarize
     words = body.split(' ')
     summary = []
     if body.length < 200

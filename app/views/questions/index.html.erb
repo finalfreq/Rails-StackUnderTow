@@ -11,7 +11,7 @@
     </div>
     <div class='row'>
       <span>
-        <%= question.summerize_whole %>
+        <%= question.summarize %>
       </span>
       <span id='time'>Asked by <%= link_to question.user.name, user_path(question.user) %> <%= time_ago_in_words(question.created_at) %> ago</span>
     </div>
