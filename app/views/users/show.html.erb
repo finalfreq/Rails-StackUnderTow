@@ -1,0 +1,48 @@
+<% if current_user == @user %>
+<h1 class="page-header text-center"> Hello <%= @user.name %></h1>
+<% else %>
+<h1 class="page-header text-center"> <%= @user.name %>'s Page</h1>
+<% end %>
+<% if can? :update, @user %>
+<%= link_to "Edit #{@user.name}", edit_user_path(@user), class: 'btn btn-info' %>
+<%= link_to "Delete #{@user.name}", user_path(@user),
+                                    data: { confirm: 'omg omg omg omg',
+                                            method: 'delete'}, class: 'btn btn-danger' %>
+<% end %>
+
+
+<h3>Your recent questions:</h3>
+<div id="question">
+  <% @user.questions.take(3).each do |question| %>
+    <div class="well">
+      <div class="row">
+        <%= link_to question_path(question) do %>
+          <h2> <%= question.name %> </h2>
+        <% end %>
+      </div>
+      <div class='row'>
+        <span>
+          <%= question.summarize %>
+        </span>
+        <span id='time'>Asked by <%= link_to question.user.name, user_path(question.user) %> <%= time_ago_in_words(question.created_at) %> ago</span>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div id="question-answers">
+  <h3>Your Recent Answers</h3>
+  <% @user.answers.take(4).each do |answer| %>
+    <div class="well">
+      <div class="row">
+        <%= link_to question_path(answer.question) do %>
+          <h2> <%= answer.body %> </h2>
+        <% end %>
+      </div>
+      <div class='row'>
+        <span>
+        </span>
+        <span id='time'>Asked by <%= link_to answer.user.name, user_path(@user) %> <%= time_ago_in_words(answer.created_at) %> ago</span>
+      </div>
+    </div>
+  <% end %>

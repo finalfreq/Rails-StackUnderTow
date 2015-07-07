@@ -23,7 +23,7 @@
     <% if current_user.admin %>
     <li><a>Admin</a></li>
     <% end %>
-    <li><a>Welcome <%= current_user.name %> </a></li>
+    <li><%= link_to current_user.name, user_path(current_user) %></li>
     <li><%= link_to "Logout", logout_path, class: "navbar-custom" %> </li>
     <% end %>
   </ul>

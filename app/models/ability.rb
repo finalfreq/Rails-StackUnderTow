@@ -9,10 +9,17 @@ class Ability
     if user.admin
       can :manage, :all
 
-    else
-      can :rud, :all, :user_id => user.id
+    elsif user.id != nil
+      can :rud, Question, :user_id => user.id
+      can :rud, User, :id => user.id
+      can :rud, Answer, :user_id => user.id
+
       can :read, :all
       can :create, :all
+
+    else
+      can :read, :all
+      can :create, User
     end
     # Define abilities for the passed in user here. For example:
     #

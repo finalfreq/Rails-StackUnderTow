@@ -5,13 +5,13 @@ attr_accessor :password
 has_many :questions
 has_many :answers
 
-validates_presence_of :password
+validates_presence_of :password, on: :create
 validates_confirmation_of :password
 validates :name, presence: true, uniqueness: true
 validates :email, presence: true, uniqueness: true
 
 before_save :encrypt_password
-after_save :signup_email
+after_create :signup_email
 
   def encrypt_password
     self.password_salt = BCrypt::Engine.generate_salt
