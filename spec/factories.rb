@@ -9,6 +9,7 @@ FactoryGirl.define do
   factory(:question) do
     name('what is foo?')
     body('where the hell does foo bar come from?')
+    user
   end
 
   factory(:answer) do

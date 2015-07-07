@@ -15,11 +15,9 @@ describe Question do
     question.summarize.should eq "asserting that an attribute in your model is contained in either the whitelist or blacklist and thus can or cannot be set via mass assignment."
   end
   it "sends an email when the question is created" do
-    user = FactoryGirl.create(:user)
     question = FactoryGirl.create(:question)
-    user.questions.push(question)
     question.question_email
-    ActionMailer::Base.deliveries.last.to.should eq [user.email]
+    ActionMailer::Base.deliveries.last.to.should eq [question.user.email]
   end
 
 end
