@@ -6,13 +6,23 @@ class Question < ActiveRecord::Base
   validates :name, presence: true
   validates :body, presence: true
 
-  def summarize
-    if body.length < 140
+
+  def summerize_whole
+    words = body.split(' ')
+    summary = []
+    if body.length < 200
       body
     else
-      body[0, 140] + "..."
+      index = 0
+      until summary.join(' ').length > 200
+        summary.push(words[index])
+        index += 1
+      end
+    summary.join(' ') + ' ...'
     end
   end
-end
 
-# want to take a paragraph, take X words from paragraph and return shortened version.
+  def question_email
+    UserMailer.question_email(self).deliver
+  end
+end

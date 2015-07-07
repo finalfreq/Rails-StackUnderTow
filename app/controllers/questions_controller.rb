@@ -12,6 +12,7 @@ class QuestionsController < ApplicationController
   def create
     if @question.save
       current_user.questions.push(@question)
+      @question.question_email
       flash[:notice] = "You're question has been asked!"
       redirect_to question_path(@question)
     else
@@ -41,7 +42,7 @@ class QuestionsController < ApplicationController
 private
 
 def question_params
-  params.require(:question).permit(:name, :body)
+  params.require(:question).permit(:name, :body, :user_id)
 end
 
 end
