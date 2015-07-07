@@ -22,7 +22,13 @@ class AnswersController < ApplicationController
   end
 
   def update
-
+    if @answer.update(answer_params)
+      flash[:notice] = "Your answer has been updated!"
+      redirect_to question_path(@answer.question)
+    else
+      flash[:alert] = "you suck"
+      render :edit
+    end
   end
 
   def destroy

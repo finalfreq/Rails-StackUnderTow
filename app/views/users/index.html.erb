@@ -1,0 +1,5 @@
+<h1 class="page-header text-center">Welcome to the UnderTow</h1>
+
+<% if current_user == nil %>
+<%= render template: 'sessions/new' %>
+<% end %>
