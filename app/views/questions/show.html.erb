@@ -2,6 +2,17 @@
 
 <h1 class="page-header"><%= @question.name %></h1>
 <div id= "question">
+<% if can? :update, @question %>
+  <%= link_to edit_question_path(@question) do %>
+    <span style="float: right" class="glyphicon glyphicon-pencil"></span>
+  <% end %>
+<% end %>
+<% if can? :update, @question %>
+  <%= link_to question_path(@question), data: { confirm: 'omg omg omg omg',
+          method: 'delete'} do %>
+    <span style="float: right" class="glyphicon glyphicon-trash"></span>
+  <% end %>
+<% end %>
 <p>
   <%= @question.body %>
 </p>
@@ -15,7 +26,12 @@
       <span style="float: right"class="glyphicon glyphicon-pencil"></span>
     <% end %>
   <% end %>
-
+  <% if can? :update, answer %>
+    <%= link_to question_answer_path(@question, answer), data: { confirm: 'omg omg omg omg',
+            method: 'delete'} do %>
+      <span style="float: right" class="glyphicon glyphicon-trash"></span>
+    <% end %>
+  <% end %>
 </p>
 <% end %>
 

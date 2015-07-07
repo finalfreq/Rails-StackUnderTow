@@ -28,11 +28,18 @@ class QuestionsController < ApplicationController
   end
 
   def update
-
+    if @question.update(question_params)
+      flash[:notice] = "Your question has been updated!"
+      redirect_to question_path(@question)
+    else
+      flash[:alert] = "you suck"
+      render :edit
+    end
   end
 
   def destroy
-
+    @question.destroy
+    redirect_to root_path
   end
 
   def show
