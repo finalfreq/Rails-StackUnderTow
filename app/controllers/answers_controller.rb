@@ -1,12 +1,10 @@
 class AnswersController < ApplicationController
+    load_and_authorize_resource param_method: :answer_params
+    load_and_authorize_resource :question
   def new
-    @answer = Answer.new
-    @question = Question.find(params[:question_id])
   end
 
   def create
-    @answer = Answer.new(answer_params)
-    @question = Question.find(params[:question_id])
     if @answer.save
       @question.answers.push(@answer)
       current_user.answers.push(@answer)

@@ -5,6 +5,7 @@ RSpec.describe UserMailer, type: :mailer do
     let(:mail) { UserMailer.signup_confirmation }
 
     it "renders the headers" do
+      binding.pry
       expect(mail.subject).to eq("Signup confirmation")
       expect(mail.to).to eq(["to@example.org"])
       expect(mail.from).to eq(["from@example.com"])

@@ -7,11 +7,9 @@ class QuestionsController < ApplicationController
       flash[:alert] = "You must login to ask such questions"
       redirect_to :login
     end
-    @question = Question.new
   end
 
   def create
-    @question = Question.new(question_params)
     if @question.save
       current_user.questions.push(@question)
       flash[:notice] = "You're question has been asked!"
@@ -26,7 +24,6 @@ class QuestionsController < ApplicationController
   end
 
   def index
-    @questions = Question.all
   end
 
   def update
@@ -38,7 +35,6 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    @question = Question.find(params[:id])
     @answer = Answer.new
   end
 

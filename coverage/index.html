@@ -14,27 +14,27 @@
       <img src="./assets/0.9.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-07T09:47:21-07:00">2015-07-07T09:47:21-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-07T10:49:01-07:00">2015-07-07T10:49:01-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">99.15%</span></span>
+    (<span class="covered_percent"><span class="green">96.32%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.15
+         1.11
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>22</b> files in total.
-    <b>118</b> relevant lines. 
-    <span class="green"><b>117</b> lines covered</span> and
-    <span class="red"><b>1</b> lines missed </span>
+    <b>25</b> files in total.
+    <b>136</b> relevant lines. 
+    <span class="green"><b>131</b> lines covered</span> and
+    <span class="red"><b>5</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -58,6 +58,26 @@
         <td>1</td>
         <td>0</td>
         <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#a8b53ce0a6d62b73e1ecb16e1d9fbc01e5756e22" class="src_link" title="app/mailers/application_mailer.rb">app/mailers/application_mailer.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>4</td>
+        <td>3</td>
+        <td>3</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#d13944028b8c4500ca6833e3ba4de2b3b189362d" class="src_link" title="app/mailers/user_mailer.rb">app/mailers/user_mailer.rb</a></td>
+        <td class="red strong">50.0 %</td>
+        <td>8</td>
+        <td>4</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0.5</td>
       </tr>
       
       <tr>
@@ -231,6 +251,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#c2554e9c507ff7c70b847b41c27080970018da10" class="src_link" title="spec/mailers/user_mailer_spec.rb">spec/mailers/user_mailer_spec.rb</a></td>
+        <td class="yellow strong">81.82 %</td>
+        <td>19</td>
+        <td>11</td>
+        <td>9</td>
+        <td>2</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#f3570fee5e1737e2016b9b7fb38967f90f305359" class="src_link" title="spec/models/answer_spec.rb">spec/models/answer_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>7</td>
@@ -307,6 +337,114 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="a8b53ce0a6d62b73e1ecb16e1d9fbc01e5756e22">
+  <div class="header">
+    <h3>app/mailers/application_mailer.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class ApplicationMailer &lt; ActionMailer::Base</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  default from: &quot;from@example.com&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  layout &#39;mailer&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="d13944028b8c4500ca6833e3ba4de2b3b189362d">
+  <div class="header">
+    <h3>app/mailers/user_mailer.rb</h3>
+    <h4><span class="red">50.0 %</span> covered</h4>
+    <div>
+      <b>4</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class UserMailer &lt; ApplicationMailer</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def signup_confirmation(user)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="4">
+          
+          
+          <code class="ruby">    @user = user</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="6">
+          
+          
+          <code class="ruby">    mail to: user.email, subject: &quot;Welcome to the UnderTow&quot;, from: &quot;undertow@gmail.com&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby">end</code>
@@ -1963,6 +2101,138 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="c2554e9c507ff7c70b847b41c27080970018da10">
+  <div class="header">
+    <h3>spec/mailers/user_mailer_spec.rb</h3>
+    <h4><span class="yellow">81.82 %</span> covered</h4>
+    <div>
+      <b>11</b> relevant lines. 
+      <span class="green"><b>9</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &quot;rails_helper&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.describe UserMailer, type: :mailer do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;signup_confirmation&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="5">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    let(:mail) { UserMailer.signup_confirmation }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;renders the headers&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      binding.pry</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(mail.subject).to eq(&quot;Signup confirmation&quot;)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="10">
+          
+          
+          <code class="ruby">      expect(mail.to).to eq([&quot;to@example.org&quot;])</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="11">
+          
+          
+          <code class="ruby">      expect(mail.from).to eq([&quot;from@example.com&quot;])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;renders the body&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(mail.body.encoded).to match(&quot;Hi&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby">end</code>
