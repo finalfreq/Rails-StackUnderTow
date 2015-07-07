@@ -8,6 +8,7 @@ class AnswersController < ApplicationController
     if @answer.save
       @question.answers.push(@answer)
       current_user.answers.push(@answer)
+      @answer.answer_email
       redirect_to question_path(@question)
       flash[:notice] = "Your answer has been submitted!"
     else

@@ -10,4 +10,8 @@ FactoryGirl.define do
     name('what is foo?')
     body('where the hell does foo bar come from?')
   end
+
+  factory(:answer) do
+    body('I pity the foo')
+  end
 end
