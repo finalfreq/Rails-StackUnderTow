@@ -1,26 +1,6 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Guest/Desktop/rails-stack-overflow-clone/spec/mailers/user_mailer_spec.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
       "/Users/Guest/Desktop/rails-stack-overflow-clone/spec/models/answer_spec.rb": [
         1,
         null,
@@ -413,6 +393,6 @@
         null
       ]
     },
-    "timestamp": 1436294568
+    "timestamp": 1436294660
   }
 }
